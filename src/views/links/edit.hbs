@@ -1,0 +1,26 @@
+<div class="container p-4 h-100">
+  <div class="row h-75 d-flex align-items-center">
+    <div class="col-md-4 mx-auto">
+      <div class="card bg-dark">
+        <form action="/links/edit/{{link.id}}" method="POST" class="card-body">
+          {{!-- El action lo que hace es decirme a donde me va a enviar la informacion
+          del formulario --}}
+          {{! Title and save button }}
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="text-light mb-3 h4">Create a New Task</h1>
+            <button class="btn btn-success btn-block">
+              Save
+            </button>
+          </div>
+          <label for="title">Write a title:</label>
+          <input type="text" value="{{link.title}}" name="title" class="form-control bg-dark text-light mb-3" placeholder="Title"autofocus/>
+          <label for="url">Website:</label>
+          <input type="url" value="{{link.url}}" name="url" class="form-control bg-dark text-light mb-3" placeholder="URL"/>
+          <label for="description">Write a description:</label>
+          <textarea name="description" rows="2" class="form-control bg-dark text-light mb-3" placeholder="Description">{{link.description}}</textarea>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
